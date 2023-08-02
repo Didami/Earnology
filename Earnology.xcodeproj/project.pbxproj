@@ -13,6 +13,7 @@
 		72FE22392A7B1A0D0096035E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72FE22372A7B1A0D0096035E /* LaunchScreen.storyboard */; };
 		72FE223C2A7B1A0D0096035E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE223B2A7B1A0D0096035E /* main.m */; };
 		72FE22452A7B1B0D0096035E /* HomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE22442A7B1B0D0096035E /* HomeController.m */; };
+		72FE22492A7B1F650096035E /* HomeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE22482A7B1F650096035E /* HomeCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,8 @@
 		72FE223B2A7B1A0D0096035E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		72FE22432A7B1B0D0096035E /* HomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeController.h; sourceTree = "<group>"; };
 		72FE22442A7B1B0D0096035E /* HomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeController.m; sourceTree = "<group>"; };
+		72FE22472A7B1F650096035E /* HomeCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeCell.h; sourceTree = "<group>"; };
+		72FE22482A7B1F650096035E /* HomeCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +66,7 @@
 				72FE222A2A7B1A0B0096035E /* AppDelegate.m */,
 				72FE222C2A7B1A0B0096035E /* SceneDelegate.h */,
 				72FE222D2A7B1A0B0096035E /* SceneDelegate.m */,
+				72FE22462A7B1F380096035E /* Components */,
 				72FE22422A7B1AFE0096035E /* Controllers */,
 				72FE22352A7B1A0D0096035E /* Assets.xcassets */,
 				72FE22372A7B1A0D0096035E /* LaunchScreen.storyboard */,
@@ -79,6 +83,15 @@
 				72FE22442A7B1B0D0096035E /* HomeController.m */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		72FE22462A7B1F380096035E /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				72FE22472A7B1F650096035E /* HomeCell.h */,
+				72FE22482A7B1F650096035E /* HomeCell.m */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +165,7 @@
 			files = (
 				72FE22452A7B1B0D0096035E /* HomeController.m in Sources */,
 				72FE222B2A7B1A0B0096035E /* AppDelegate.m in Sources */,
+				72FE22492A7B1F650096035E /* HomeCell.m in Sources */,
 				72FE223C2A7B1A0D0096035E /* main.m in Sources */,
 				72FE222E2A7B1A0B0096035E /* SceneDelegate.m in Sources */,
 			);

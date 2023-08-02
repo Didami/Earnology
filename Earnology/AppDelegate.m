@@ -16,6 +16,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    // White non-translucent navigation bar, supports dark appearance
+    if (@available(iOS 15, *)) {
+        UINavigationBarAppearance* appearance = [UINavigationBarAppearance new];
+        [appearance configureWithOpaqueBackground];
+        [UINavigationBar appearance].standardAppearance = appearance;
+        [UINavigationBar appearance].scrollEdgeAppearance = appearance;
+    }
+    
     return YES;
 }
 

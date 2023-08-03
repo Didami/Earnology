@@ -9,6 +9,8 @@
 
 @interface HomeController ()
 
+@property (strong, nonatomic) NSArray<Category*>* categories;
+
 @end
 
 @implementation HomeController
@@ -17,6 +19,12 @@
     [super viewDidLoad];
     [self instantiateUI];
     [self setupViews];
+    
+    self.categories = @[
+        [[Category alloc] initWithName:@"Savings" percentage:@20],
+        [[Category alloc] initWithName:@"Wants" percentage:@30],
+        [[Category alloc] initWithName:@"Needs" percentage:@50]
+    ];
 }
 
 // MARK: - Front-End
@@ -57,16 +65,38 @@
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-    return 4;
+    return self.categories.count + 1;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    return CGSizeMake(collectionView.frame.size.width, collectionView.frame.size.height / 4);
+    
+    double height = 0;
+    
+    if (indexPath.item == 0) {
+        height = collectionView.frame.size.height * 0.2;
+    } else {
+        height = collectionView.frame.size.height * 0.8 * (self.categories[indexPath.item - 1].percentage.doubleValue / 100);
+    }
+    
+    return CGSizeMake(collectionView.frame.size.width, height);
 }
 
 - (__kindof UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     HomeCell* cell = [collectionView dequeueReusableCellWithReuseIdentifier:[HomeCell identifier] forIndexPath:indexPath];
-    cell.backgroundColor = (indexPath.item % 2 == 0) ? (UIColor.greenColor) : (UIColor.blueColor);
+    
+    NSArray<UIColor*>* colors = @[
+        UIColor.blackColor,
+        [[UIColor alloc] initWithRed:160.0/255.0 green:156.0/255.0 blue:159.0/255.0 alpha:1],
+        [[UIColor alloc] initWithRed:169.0/255.0 green:139.0/255.0 blue:51.0/255.0 alpha:1],
+        [[UIColor alloc] initWithRed:28.0/255.0 green:28.0/255.0 blue:28.0/255.0 alpha:1],
+    ];
+    
+    cell.backgroundColor = colors[indexPath.item];
+    
+    if (indexPath.item > 0) {
+        [cell setupCellWithCategory:self.categories[indexPath.item - 1]];
+    }
+    
     return cell;
 }
 

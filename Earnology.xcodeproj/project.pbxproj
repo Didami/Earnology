@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72E8E80F2A7B4BEC00DB62C6 /* Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 72E8E80E2A7B4BEC00DB62C6 /* Category.m */; };
 		72FE222B2A7B1A0B0096035E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE222A2A7B1A0B0096035E /* AppDelegate.m */; };
 		72FE222E2A7B1A0B0096035E /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 72FE222D2A7B1A0B0096035E /* SceneDelegate.m */; };
 		72FE22362A7B1A0D0096035E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72FE22352A7B1A0D0096035E /* Assets.xcassets */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72E8E80D2A7B4BEC00DB62C6 /* Category.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Category.h; sourceTree = "<group>"; };
+		72E8E80E2A7B4BEC00DB62C6 /* Category.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Category.m; sourceTree = "<group>"; };
 		72FE22262A7B1A0B0096035E /* Earnology.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Earnology.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FE22292A7B1A0B0096035E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		72FE222A2A7B1A0B0096035E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -43,6 +46,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		72E8E80C2A7B4BDD00DB62C6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72E8E80D2A7B4BEC00DB62C6 /* Category.h */,
+				72E8E80E2A7B4BEC00DB62C6 /* Category.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		72FE221D2A7B1A0B0096035E = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 				72FE222A2A7B1A0B0096035E /* AppDelegate.m */,
 				72FE222C2A7B1A0B0096035E /* SceneDelegate.h */,
 				72FE222D2A7B1A0B0096035E /* SceneDelegate.m */,
+				72E8E80C2A7B4BDD00DB62C6 /* Models */,
 				72FE22462A7B1F380096035E /* Components */,
 				72FE22422A7B1AFE0096035E /* Controllers */,
 				72FE22352A7B1A0D0096035E /* Assets.xcassets */,
@@ -164,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				72FE22452A7B1B0D0096035E /* HomeController.m in Sources */,
+				72E8E80F2A7B4BEC00DB62C6 /* Category.m in Sources */,
 				72FE222B2A7B1A0B0096035E /* AppDelegate.m in Sources */,
 				72FE22492A7B1F650096035E /* HomeCell.m in Sources */,
 				72FE223C2A7B1A0D0096035E /* main.m in Sources */,

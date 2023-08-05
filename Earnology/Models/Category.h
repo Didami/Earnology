@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) NSString* name;
 @property (strong, nonatomic) NSNumber* percentage;
+@property (nonatomic) double value;
 
 - (instancetype)initWithName: (NSString*)name percentage: (NSNumber*)percentage;
 

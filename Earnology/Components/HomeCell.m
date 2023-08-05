@@ -31,7 +31,8 @@
     self.titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.textColor = UIColor.whiteColor;
-    self.titleLabel.font = [UIFont boldSystemFontOfSize:32];
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
+    self.titleLabel.font = [UIFont boldSystemFontOfSize:28];
     
     self.subtitleLabel = [[UILabel alloc] init];
     self.subtitleLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -58,11 +59,12 @@
 }
 
 - (void)setupCellWithCategory: (Category*)category {
+    
     // TODO: - Get from UserDefaults
-    double totalEarnings = 0.0;
+//    double totalEarnings = 0.0;
     
     self.subtitleLabel.text = [NSString stringWithFormat:@"%@ - %@%@", category.name, category.percentage, @"%"];
-    self.titleLabel.text = [NSString stringWithFormat:@"%@%.2f", @"$", category.percentage.doubleValue * totalEarnings];
+    self.titleLabel.text = [NSString stringWithFormat:@"%@%.2f", @"$", category.value];
 }
 
 @end

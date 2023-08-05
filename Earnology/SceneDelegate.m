@@ -22,7 +22,7 @@
     
     self.window = [[UIWindow alloc] initWithFrame:windowScene.coordinateSpace.bounds];
     self.window.windowScene = windowScene;
-    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[HomeController new]];
+    [self.window setRootViewController:[[UINavigationController alloc] initWithRootViewController:[HomeController new]]];
     [self.window makeKeyAndVisible];
 }
 

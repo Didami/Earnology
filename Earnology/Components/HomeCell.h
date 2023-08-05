@@ -6,11 +6,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Extensions+Constants.h"
 #import "Category.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface HomeCell : UICollectionViewCell
+@interface HomeCell : UICollectionViewCell<UITextFieldDelegate>
 
 + (NSString*) identifier;
 
@@ -18,6 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong, nonatomic) UILabel* titleLabel;
 @property (strong, nonatomic) UILabel* subtitleLabel;
+@property (strong, nonatomic) UITextField* textField;
 
 - (void)setupCellWithCategory: (Category*)category;
 
